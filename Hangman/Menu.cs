@@ -81,7 +81,7 @@ namespace Hangman
 
             //difficulty = spinner.GetItemAtPosition(e.Position).ToString();
 
-            string toast = string.Format("Level of diffuculty on {0}", spinner.GetItemAtPosition(e.Position));
+            string toast = string.Format("Difficulty set to {0}", spinner.GetItemAtPosition(e.Position));
             Toast.MakeText(this, toast, ToastLength.Long).Show();
 
             //difficulty = difficulty.ToLower();

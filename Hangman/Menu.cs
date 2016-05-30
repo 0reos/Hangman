@@ -35,7 +35,6 @@ namespace Hangman
         public void IntializeControls()
         {
             btnPlay = FindViewById<Button>(Resource.Id.btnPlayHangman);
-
             
             btnPlay.Click += delegate
             {

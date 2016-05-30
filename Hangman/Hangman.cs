@@ -46,7 +46,6 @@ namespace Hangman
 
             IntializeControls();
            
-
         }
 
         public void IntializeControls()

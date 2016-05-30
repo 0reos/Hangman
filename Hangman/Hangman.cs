@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace Hangman
 {
-    [Activity (Label = "Hangman", Icon = "@drawable/icon")]
+    [Activity (Label = "Hangman")]
     public class Hangman : Activity
     {
         private Button btnA;
@@ -112,6 +112,9 @@ namespace Hangman
             clickedButton.Enabled = false;
            
         }
+
     }
+
+    //Page 104 for SQlite work on to do list
 }
 

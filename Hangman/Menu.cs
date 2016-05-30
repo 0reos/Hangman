@@ -6,6 +6,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Text.Style;
 using Android.Views;
 using Android.Widget;
 
@@ -33,22 +34,16 @@ namespace Hangman
 
         public void IntializeControls()
         {
-            btnPlay = FindViewById<Button>(Resource.Id.btnPlay);
+            btnPlay = FindViewById<Button>(Resource.Id.btnPlayHangman);
 
-            btnPlay.Click += onBtnPlayClick;
-
-            //btnPlay.Click += delegate
-            //{
-            //    StartActivity(typeof(Main));
-            //};
-
+            
+            btnPlay.Click += delegate
+            {
+                StartActivity(typeof (Hangman));
+            };
 
         }
-
-        void onBtnPlayClick(object sender, EventArgs e)
-        {
-            //StartActivity(typeof(Main));
-        }
+        
 
         private void SpinnerSetup()
         {

@@ -131,7 +131,7 @@ namespace Hangman
 			public const int btnP = 2131099667;
 			
 			// aapt resource value: 0x7f060021
-			public const int btnPlay = 2131099681;
+			public const int btnPlayHangman = 2131099681;
 			
 			// aapt resource value: 0x7f060014
 			public const int btnQ = 2131099668;

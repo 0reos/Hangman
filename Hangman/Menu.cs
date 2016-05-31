@@ -18,13 +18,14 @@ namespace Hangman
         private Spinner spinner;
         private string difficulty = "Easy";
         private Button btnPlay;
+        private Button btnHighScores;
 
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
+            //Set our view from the "menu" layout resource
             SetContentView(Resource.Layout.Menu);
 
             SpinnerSetup();
@@ -35,12 +36,17 @@ namespace Hangman
         public void IntializeControls()
         {
             btnPlay = FindViewById<Button>(Resource.Id.btnPlayHangman);
-            
+            btnHighScores = FindViewById<Button>(Resource.Id.btnHighScores);
+
             btnPlay.Click += delegate
             {
                 StartActivity(typeof (Hangman));
             };
 
+            btnHighScores.Click += delegate
+            {
+                StartActivity(typeof(HighScores));
+            };
         }
         
 

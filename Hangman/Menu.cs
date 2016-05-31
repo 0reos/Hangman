@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Hangman
 {
-    [Activity(Label = "Menu", MainLauncher = true)]
+    [Activity(Label = "Hangman", MainLauncher = true)]
     public class Menu : Activity
     {
         private Spinner spinner;
@@ -25,7 +25,7 @@ namespace Hangman
         {
             base.OnCreate(bundle);
 
-            //Set our view from the "menu" layout resource
+            // Set our view from the "Menu" layout resource
             SetContentView(Resource.Layout.Menu);
 
             SpinnerSetup();
@@ -40,7 +40,7 @@ namespace Hangman
 
             btnPlay.Click += delegate
             {
-                StartActivity(typeof (Hangman));
+                StartActivity(typeof (Menu));
             };
 
             btnHighScores.Click += delegate

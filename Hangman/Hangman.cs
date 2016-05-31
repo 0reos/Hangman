@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace Hangman
 {
-    [Activity (Label = "Hangman")]
+    [Activity (Label = "Play Hangman")]
     public class Hangman : Activity
     {
         private Button btnA;

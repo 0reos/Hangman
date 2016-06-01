@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -37,7 +38,7 @@ namespace Hangman
         private Button btnX;
         private Button btnY;
         private Button btnZ;
-
+        
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -46,7 +47,6 @@ namespace Hangman
             SetContentView(Resource.Layout.Main);
 
             IntializeControls();
-           
         }
 
         public void IntializeControls()
@@ -111,11 +111,11 @@ namespace Hangman
             //Disabling buttons when clicked
             Button clickedButton = (Button) sender;
             clickedButton.Enabled = false;
-           
         }
 
+        
     }
 
-    //Page 104 for SQlite work on to do list
+    
 }
 

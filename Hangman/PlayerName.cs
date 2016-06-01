@@ -18,6 +18,7 @@ namespace Hangman
         private Spinner spinner;
         private string difficulty = "Choose a difficulty";
         private Button btnStart;
+        private int RandomNum;
 
 
         protected override void OnCreate(Bundle bundle)
@@ -29,17 +30,36 @@ namespace Hangman
             
             InitializeControls();
             SpinnerSetup();
+         
         }
 
         public void InitializeControls()
         {
+            RandomNum = RandomNumber();
+
             btnStart = FindViewById<Button>(Resource.Id.btnStart);
 
             btnStart.Click += delegate
             {
                 StartActivity(typeof(Hangman));
             };
+
+            //Toast.MakeText(this, RandomNum, ToastLength.Long).Show();
+
+            
         }
+
+
+        public int RandomNumber()
+        {
+            //Generates a random number
+            Random random = new Random();
+
+            int RandomNum = random.Next(0, 5000);
+            
+            return RandomNum;
+        }
+
 
         private void SpinnerSetup()
         {

@@ -73,7 +73,7 @@ namespace Hangman
 			public const int HM2 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int HMCreate = 2130837508;
+			public const int HMCreate5 = 2130837508;
 			
 			static Drawable()
 			{

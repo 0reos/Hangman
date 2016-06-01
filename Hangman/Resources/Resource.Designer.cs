@@ -221,7 +221,7 @@ namespace Hangman
 			public const int sqlite_id = 2131099648;
 			
 			// aapt resource value: 0x7f06002a
-			public const int txtEditTitle = 2131099690;
+			public const int txtName = 2131099690;
 			
 			static Id()
 			{

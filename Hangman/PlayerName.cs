@@ -16,7 +16,7 @@ namespace Hangman
     public class PlayerName : Activity
     {
         private Spinner spinner;
-        private string difficulty = "Easy";
+        private string difficulty = "Choose a difficulty";
         private Button btnStart;
 
 
@@ -54,6 +54,7 @@ namespace Hangman
                 //TheCreateFromResource() method then creates a new ArrayAdapter, which binds each item in the string array to the initial appearance for the Spinner
                 var arrayadapter = ArrayAdapter.CreateFromResource(this, Resource.Array.difficulty_array, Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
+                //Sets spinner dropdown type
                 arrayadapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
                 //Setting the ArrayAdapter to associate all of its items with the Spinner by setting the Adapter property 

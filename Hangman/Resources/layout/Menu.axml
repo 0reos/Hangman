@@ -20,10 +20,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnHighScores"
         android:textColor="@android:color/holo_blue_bright" />
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:textColor="@android:color/holo_blue_bright" />
 </LinearLayout>

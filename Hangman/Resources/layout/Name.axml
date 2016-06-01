@@ -5,12 +5,9 @@
     android:layout_height="match_parent">
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="212.5dp"
-        android:id="@+id/txtEditTitle"
-        android:hint="EnterTitle"
-        android:layout_weight="1"
-        android:layout_gravity="top"
-        android:gravity="top" />
+        android:layout_height="50.0dp"
+        android:id="@+id/txtName"
+        android:hint="Enter Name" />
     <Spinner
         android:layout_width="match_parent"
         android:id="@+id/SPDifficulty"

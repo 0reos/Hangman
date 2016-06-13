@@ -59,8 +59,6 @@ namespace Hangman
 			LoadWords();
 			SetContentView(Resource.Layout.Main);
 
-			//InputStream input = Assets.Open("HangmanWords.txt");
-
 			IntializeControls();
 			WordPicker();
 		}
@@ -195,7 +193,7 @@ namespace Hangman
 				charUnderScoreWord[i] = '_';
 			}
 
-            //Showing word as underscores back in text view
+            //Showing letters as underscores back in text view
 			string textviewword = new string(charUnderScoreWord);
 		    
 			textVWord.Text = textviewword;
@@ -215,12 +213,17 @@ namespace Hangman
 				}
 			}
 
-			if (NextImageToLoad == false)
+            //Revealing correct letters in the word as they are clicked
+            string textviewword = new string(charUnderScoreWord);
+
+            textVWord.Text = textviewword;
+
+            if (NextImageToLoad == false)
 			{
 				//increase image 
 			    NextImageToLoad = true;
 			}
-            
+            //Create images to load when the wrong letter is clicked so it will be shown in game
         }
 
 	}

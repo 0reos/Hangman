@@ -1,4 +1,3 @@
-a
 aardvark
 abaci
 aback
@@ -399,7 +398,6 @@ acute
 acutely
 acuteness
 acyclovir
-ad
 adage
 adagio
 adamant
@@ -476,7 +474,6 @@ adjuster
 adjustment
 adjustor
 adjutant
-ad-lib
 adman
 administer
 administrate
@@ -805,11 +802,6 @@ airbag
 airbase
 airborne
 airbrush
-air-condition
-air-conditioned
-air-conditioner
-air-conditioning
-air-cooled
 aircraft
 airdrop
 airfare
@@ -926,9 +918,7 @@ alkalize
 alkaloid
 alkyd
 all
-all-around
 allay
-all-clear
 allegation
 allege
 alleged

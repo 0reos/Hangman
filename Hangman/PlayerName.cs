@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -19,8 +18,7 @@ namespace Hangman
         private string difficulty = "Choose a difficulty";
         private Button btnStart;
         private int RandomNum;
-
-
+        
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -30,12 +28,12 @@ namespace Hangman
             
             InitializeControls();
             SpinnerSetup();
-         
         }
+
 
         public void InitializeControls()
         {
-            RandomNum = RandomNumber();
+            //RandomNum = RandomNumber();
 
             btnStart = FindViewById<Button>(Resource.Id.btnStart);
 
@@ -43,24 +41,9 @@ namespace Hangman
             {
                 StartActivity(typeof(Hangman));
             };
-
-            //Toast.MakeText(this, RandomNum, ToastLength.Long).Show();
-
-            
         }
 
-
-        public int RandomNumber()
-        {
-            //Generates a random number
-            Random random = new Random();
-
-            int RandomNum = random.Next(0, 5000);
-            
-            return RandomNum;
-        }
-
-
+        
         private void SpinnerSetup()
         {
             //Tie in the spinner
@@ -86,6 +69,7 @@ namespace Hangman
             }
         }
 
+
         private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             //Making a fake spinner to send through data to it
@@ -94,7 +78,7 @@ namespace Hangman
             //difficulty = spinner.GetItemAtPosition(e.Position).ToString();
 
             string toast = string.Format("Difficulty set to {0}", spinner.GetItemAtPosition(e.Position));
-            Toast.MakeText(this, toast, ToastLength.Long).Show();
+            Toast.MakeText(this, toast, ToastLength.Short).Show();
 
             //difficulty = difficulty.ToLower();
         }

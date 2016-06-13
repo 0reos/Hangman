@@ -15,6 +15,7 @@
     <Button
         android:text="Save and Start"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnStart" />
+        android:layout_height="46.5dp"
+        android:id="@+id/btnStart"
+        android:textColor="#17A007" />
 </LinearLayout>

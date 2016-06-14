@@ -224,6 +224,8 @@ namespace Hangman
 			    NextImageToLoad = true;
 			}
             //Create images to load when the wrong letter is clicked so it will be shown in game
+
+
         }
 
 	}

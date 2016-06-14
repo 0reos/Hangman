@@ -7,7 +7,7 @@
         android:src="@drawable/FG"
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="346.0dp" />
+        android:layout_height="460.0dp" />
     <Button
         android:text="Play"
         android:layout_width="match_parent"

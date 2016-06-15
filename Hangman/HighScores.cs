@@ -15,13 +15,32 @@ namespace Hangman
     [Activity(Label = "HighScores")]
     public class HighScores : Activity
     {
+        private Button btnPlay;
+        private Button btnMenu;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            
             // Set our view from the "HighScores" layout resource
             SetContentView(Resource.Layout.HighScores);
 
+            IntializeControls();
+        }
+
+        public void IntializeControls()
+        {
+            btnPlay = FindViewById<Button>(Resource.Id.btnPlay);
+            btnMenu = FindViewById<Button>(Resource.Id.btnMenu);
+
+            btnPlay.Click += delegate
+            {
+                StartActivity(typeof(Hangman));
+            };
+            btnMenu.Click += delegate
+            {
+                StartActivity(typeof(Menu));
+            };
         }
     }
 }

@@ -33,8 +33,6 @@ namespace Hangman
 
         public void InitializeControls()
         {
-            //RandomNum = RandomNumber();
-
             btnStart = FindViewById<Button>(Resource.Id.btnStart);
 
             btnStart.Click += delegate

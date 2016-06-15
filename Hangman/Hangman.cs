@@ -217,7 +217,7 @@ namespace Hangman
 
         private void AfterButtonClick(char letter)
         {
-            Boolean NextImageToLoad = true;
+            Boolean LoadImageIsIncorrect = true;
 
             //loop through the word checking if each letter matches the one you clicked
             for (int i = 0; i < charUnderScoreWord.Length; i++)
@@ -227,7 +227,7 @@ namespace Hangman
                 {
                     //pass the letter to the underscored char at that place
                     charUnderScoreWord[i] = letter;
-                    NextImageToLoad = false;
+                    LoadImageIsIncorrect = false;
                 }
                 else if (letter != charGameWord[i])
                 {
@@ -241,51 +241,51 @@ namespace Hangman
 
             textVWord.Text = textviewword;
 
-            if (NextImageToLoad != false)
+            if (LoadImageIsIncorrect == true)
             {
-                //Changing picture when letter clicked doesn't match letter in gameword
+                count++;
+
+                //Changing picture when letter clicked doesn't match letter in the gameword
                 switch (count)
                 {
                     case 1:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM1);
-                        //NextImageToLoad = true; ???
-                        count++;
                         break;
                     case 2:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM2);
-                        count++;
                         break;
                     case 3:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM3);
-                        count++;
                         break;
                     case 4:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM4);
-                        count++;
                         break;
                     case 5:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM5);
-                        count++;
                         break;
                     case 6:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM6);
-                        count++;
                         break;
                 }
                 
-                //switch
-                //increase image 
-               //NextImageToLoad = true;
-
+                
                 //After word has been completed disable buttons and display a result you win! Play again?  
             }
-            
+
+            //popup dialogue 
+
+            //async void OnAlertYesNoClicked(object sender, EventArgs e)
+
+            //{
+            //    var answer = await Display("Question?", "Would you like to play a game", "Yes", "No");
+            //    Debug.WriteLine("Answer: " + answer);
+            //}
         }
 
     }

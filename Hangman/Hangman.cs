@@ -68,6 +68,36 @@ namespace Hangman
             WordPicker();
         }
 
+        public void DisableAllButtons()
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnE.Enabled = false;
+            btnF.Enabled = false;
+            btnG.Enabled = false;
+            btnH.Enabled = false;
+            btnI.Enabled = false;
+            btnJ.Enabled = false;
+            btnK.Enabled = false;
+            btnL.Enabled = false;
+            btnM.Enabled = false;
+            btnN.Enabled = false;
+            btnO.Enabled = false;
+            btnP.Enabled = false;
+            btnQ.Enabled = false;
+            btnR.Enabled = false;
+            btnS.Enabled = false;
+            btnT.Enabled = false;
+            btnU.Enabled = false;
+            btnV.Enabled = false;
+            btnW.Enabled = false;
+            btnX.Enabled = false;
+            btnY.Enabled = false;
+            btnZ.Enabled = false;
+        }
+
         public void IntializeControls()
         {
             btnA = FindViewById<Button>(Resource.Id.btnA);
@@ -132,10 +162,12 @@ namespace Hangman
 
             btnNewGame.Click += delegate
             {
+                Finish();
                 StartActivity(typeof(Hangman));
             };
             btnMenu.Click += delegate
             {
+                Finish();
                 StartActivity(typeof(Menu));
             };
         }
@@ -229,11 +261,11 @@ namespace Hangman
                     charUnderScoreWord[i] = letter;
                     LoadImageIsIncorrect = false;
                 }
-                else if (letter != charGameWord[i])
-                {
-                    //Needs to show when letter clicked doesn't match letters in word?????
-                    Toast.MakeText(this, "You can see this " + i, ToastLength.Short).Show();
-                }
+                //else if (letter != charGameWord[i])
+                //{
+                    
+                    
+                //}
             }
 
             //Revealing correct letters in the word as they are clicked
@@ -271,9 +303,10 @@ namespace Hangman
                     case 6:
                         imageView = FindViewById<ImageView>(Resource.Id.imageView);
                         imageView.SetImageResource(Resource.Drawable.HM6);
+                        Toast.MakeText(this, "You lost, play again?", ToastLength.Short).Show();
+                        DisableAllButtons();
                         break;
                 }
-                
                 
                 //After word has been completed disable buttons and display a result you win! Play again?  
             }

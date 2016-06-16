@@ -35,10 +35,12 @@ namespace Hangman
 
             btnPlay.Click += delegate
             {
+                Finish();
                 StartActivity(typeof(Hangman));
             };
             btnMenu.Click += delegate
             {
+                Finish();
                 StartActivity(typeof(Menu));
             };
         }

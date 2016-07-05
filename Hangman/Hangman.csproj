@@ -57,6 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAdapter.cs" />
+    <Compile Include="DatabaseManager.cs" />
+    <Compile Include="DBMainActivity.cs" />
     <Compile Include="Hangman.cs" />
     <Compile Include="HighScores.cs" />
     <Compile Include="Menu.cs" />

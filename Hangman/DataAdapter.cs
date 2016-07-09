@@ -10,44 +10,45 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Hangman
-{
-    class DataAdapter : BaseAdapter<tblHangmanDB>
-    {
-        private readonly Activity context;
-        private readonly List<tblHangmanDB> items;
+//namespace Hangman
+//{
+//    class DataAdapter : BaseAdapter <tblHangmanDB>
+//    {
+//        private readonly Activity context;
+//        private readonly List<tblHangmanDB> items;
 
-        public DataAdapter(Activity context, List<tblHangmanDB> items)
-        {
-            this.context = context;
-            this.items = items;
-        }
+//        public DataAdapter(Activity context, List<tblHangmanDB> items)
+//        {
+//            this.context = context;
+//            this.items = items;
+//        }
 
-        public override tblHangmanDB this[int position]
-        {
-            get { return items[position]; }
-        }
+//        public override tblHangmanDB this[int position]
+//        {
+//            get { return items[position]; }
+//        }
 
-        public override int Count
-        {
-            get { return items.Count; }
-        }
+//        public override int Count
+//        {
+//            get { return items.Count; }
+//        }
 
-        public override long GetItemId(int position)
-        {
-            return position;
-        }
+//        public override long GetItemId(int position)
+//        {
+//            return position;
+//        }
 
-        public override View GetView(int position, View convertView, ViewGroup parent)
-        {
-            var item = items[position];
-            var view = convertView;
-            if (view == null) //no view to re-use, create new 
-                view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
-            view.FindViewById<TextView>(Resource.Id.lbltitle).Text = item.Title;
-            view.FindViewById<TextView>(Resource.Id.lbldescription).Text = item.Details;
-            return view;
-        }
+//        //public override View GetView(int position, View convertView, ViewGroup parent)
+//        //{
+//        //    var item = items[position];
+//        //    var view = convertView;
+//        //    if (view == null) 
+//        //    //no view to re-use, create new 
+//        //    view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
+//        //    view.FindViewById<TextView>(Resource.Id.lbltitle).Text = item.Title;
+//        //    view.FindViewById<TextView>(Resource.Id.lbldescription).Text = item.Details;
+//        //    return view;
+//        //}
 
-    }
-}
+//    }
+//}
